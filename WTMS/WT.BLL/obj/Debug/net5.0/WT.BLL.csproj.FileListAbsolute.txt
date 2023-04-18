@@ -1,0 +1,15 @@
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\bin\Debug\net5.0\WT.BLL.deps.json
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\bin\Debug\net5.0\WT.BLL.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\bin\Debug\net5.0\WT.BLL.pdb
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\bin\Debug\net5.0\WT.DAL.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\bin\Debug\net5.0\WT.DAL.pdb
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.csproj.AssemblyReference.cache
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.AssemblyInfoInputs.cache
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.AssemblyInfo.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.csproj.CopyComplete
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\ref\WT.BLL.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.pdb
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\bin\Debug\net5.0\ref\WT.BLL.dll

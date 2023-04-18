@@ -1,0 +1,112 @@
+﻿@model Product
+@using System.Text;
+@using System.Text.RegularExpressions
+<style>
+    .active {
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+        background-color: white !important;
+    }
+    .nav-link {
+        padding: 0.5rem 0.25rem !important;
+    }
+</style>
+
+<div class="container-fluid flex-grow-1 container-p-y">
+    @if (Model != null)
+    {
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="product-detai-imgs">
+                                    <div class="row">
+                                        <div class="col-md-2 col-sm-3 col-4">
+                                            <div class="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                @{
+                                                    int count = 0;
+                                                    foreach (var item in Model.Images)
+                                                    {
+                                                        count++;
+                                                        <a class="nav-link @(count==1 ? "active" : "")" id="product-@count-tab" data-bs-toggle="pill" href="#product-@count" role="tab" aria-controls="product-@count" aria-selected="true">
+                                                            <img src="~/Documents/ProductImage/@item.ImageName" alt="" class="img-fluid mx-auto d-block rounded">
+                                                        </a>
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 offset-md-1 col-sm-9 col-8">
+                                            <div class="tab-content" id="v-pills-tabContent" style="padding:0; ">
+                                                @{
+                                                    int count1 = 0;
+                                                    foreach (var item in Model.Images)
+                                                    {
+                                                        count1++;
+                                                        <div class="tab-pane fade @(count1==1 ? "show active" : "")" id="product-@count1" role="tabpanel" aria-labelledby="product-@count1-tab">
+                                                            <div>
+                                                                <img src="~/Documents/ProductImage/@item.ImageName" alt="" class="img-fluid mx-auto d-block">
+                                                            </div>
+                                                        </div>
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6">
+                                <div class="mt-4 mt-xl-3">
+                                    <h6 class="text-black">Kateqoriya: <span class="text-muted">@Model.SubCategory.Name</span> </h6>
+                                    <h6 class="text-black">Brand: <span class="text-muted">@Model.Brand.Name</span></h6>
+                                    <h6 class="text-black">Model: <span class="text-muted">@Model.Name</span></h6>
+                                    <h6 class="text-black">Endirim faizi: <span class="text-muted">@ViewBag.percent %</span></h6>
+                                    <h6 class="text-black">Qiymət: <span class="text-muted">@Model.Price AZN</span></h6>
+                                    <h6 class="text-black">Nağd alış qiyməti: <span class="text-muted"><del>@Model.Price AZN</del></span>  <span class="text-muted ms-2">@(Model.Price-@Model.DisCount) AZN</span></h6>
+                                    <h6 class="text-black">Məhsulun sayı: <span class="text-muted">@Model.Count</span></h6>
+                                    <h6 class="text-black">Qaranti müddəti: <span class="text-muted">@Model.WarrantyYearNumber il</span></h6>
+                                    <h6 class="text-black">Kamaniya: <span class="text-muted">@Model.OfferCompany.Title</span></h6>
+                                    <h6 class="text-black">Çatdırılma: <span class="text-muted">@Model.IsFreeDelivery</span></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="mt-5">
+                            <h5 class="mb-3">Xüsusiyyətlər :</h5>
+                            <div class="row">
+                                @if (ViewBag.Specifications is not null)
+                                {
+                                    @foreach (string item in ViewBag?.Specifications)
+                                    {
+                                        if (!string.IsNullOrWhiteSpace(item))
+                                        { 
+                                            <div class="col-sm-6  mb-1">
+                                                <p class="text-black border border-success p-2 rounded">@item</p>
+                                            </div>
+                                        }
+
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+    else
+    {
+        <div class="misc-wrapper" style="margin: 0 auto; width: fit-content; text-align: center;">
+            <h2 class="mb-2 mx-2">Məlumat tapilmadi :(</h2>
+            <p class="mb-4 mx-2">Oops! 😖</p>
+            <a asp-action="Index" class="btn btn-primary">Geri qayıt</a>
+            <div class="mt-3">
+                <img src="~/Assets/img/illustrations/page-misc-error-light.png" alt="page-misc-error-light" width="500" class="img-fluid" data-app-dark-img="illustrations/page-misc-error-dark.png" data-app-light-img="illustrations/page-misc-error-light.png">
+            </div>
+        </div>
+    }
+</div>

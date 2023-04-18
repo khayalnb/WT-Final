@@ -1,0 +1,110 @@
+﻿@model ShopAndOffice
+<style>
+    .form {
+        box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+        background-color: #fff;
+        border: 0 solid #d9dee3;
+        border-radius: 0.5rem;
+        padding: 24px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<div class="container-fluid flex-grow-1 container-p-y">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form">
+            <div class="row ">
+                <div class="col-sm-6">
+                    <div>
+                        <label asp-for="Name" class="form-label">Filial adı</label>
+                        <input asp-for="Name" class="form-control" type="text">
+                        <div class="mt-2">
+                            <span class="text-danger mt-2" asp-validation-for="Name"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div>
+                        <label asp-for="Adress" class="form-label">Adress </label>
+                        <input asp-for="Adress" class="form-control" type="text">
+                        <div class="mt-2">
+                            <span class="text-danger mt-2" asp-validation-for="Adress"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div>
+                        <label asp-for="Phone" class="form-label">Telefon</label>
+                        <input asp-for="Phone" class="form-control" type="text">
+                        <div class="mt-2">
+                            <span class="text-danger mt-2" asp-validation-for="Phone"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div>
+                        <label asp-for="MapUrl" class="form-label">Xəritə URL</label>
+                        <input asp-for="MapUrl" class="form-control" type="text">
+                        <div class="mt-2">
+                            <span class="text-danger mt-2" asp-validation-for="MapUrl"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div>
+                        <label class="form-label">Xidmət növü</label>
+                        <div>
+                            <select class="js-example-basic-single form-select" asp-for="AdressTypeId">
+                                <option value="">Seç</option>
+                                @foreach (var item in Model.AdressTypes)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 mt-4">
+                <a asp-controller="AdressType" asp-action="Index" class="btn btn-secondary me-3">Geri qayıt</a>
+                <button type="submit" class="btn btn-primary ">Əlavə et</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+<style>
+    .select2-container--default .select2-selection--single {
+        background-color: #fff;
+        border: 1px solid #d9dee3;
+        border-radius: 4px;
+        height: 38.5px;
+        padding-top: 5px;
+        border-radius: 0.375rem;
+    }
+
+    .select2-selection__arrow b {
+        transform: translateY(5px);
+    }
+</style>
+
+@section script{
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.js-example-basic-single').select2();
+        });
+    </script>
+}

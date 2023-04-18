@@ -1,0 +1,100 @@
+﻿<aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+    <div class="app-brand demo">
+        <img style="width: fit-content; margin-right: 7.5px;"
+             src="~/Assets/img/Logo/Logo.b9f47734dc8a7d48845278a3459f1134.svg" alt=""><img src="~/Assets/img/Logo/wt.svg" alt="logo" />
+
+        <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+            <i class="bx bx-chevron-left bx-sm align-middle"></i>
+        </a>
+    </div>
+
+    <div class="menu-inner-shadow"></div>
+
+    <ul class="menu-inner py-1">
+        <!-- Dashboard -->
+        <li class="menu-item">
+            <a asp-controller="Home" asp-action="Index" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Əsas</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a asp-controller="Category" asp-action="Index" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Kateqoriya</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a asp-controller="SubCategory" asp-action="Index" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Alt Kateqoriya</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a asp-controller="Brand" asp-action="Index" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Brend</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a asp-controller="Product" asp-action="Index" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Məhsullar</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a asp-controller="OfferCompany" asp-action="Index" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Kampaniyalar</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a asp-controller="AdressType" asp-action="Index" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Xidmət növləri</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a asp-controller="ShopAndOffice" asp-action="Index" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Xidmət şəbəkələri</div>
+            </a>
+        </li>
+
+        <!-- Layouts -->
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-layout"></i>
+                <div data-i18n="Layouts">Bloq</div>
+            </a>
+
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a asp-controller="Blog" asp-action="ActiveBlog" class="menu-link">
+                        <div data-i18n="Without menu">Aktiv Bloqlar</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a asp-controller="Blog" asp-action="DeactiveBlog" class="menu-link">
+                        <div data-i18n="Without navbar">Deaktiv bloqlar</div>
+                    </a>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</aside>
+<script>
+    window.onload = function () {
+        let menuItems = document.querySelectorAll(".menu-link");
+        let currentPath = window.location.pathname;
+
+        menuItems.forEach(item => {
+            let itemPath = item.getAttribute("href");
+            let realPathName = itemPath.substring(1);
+            if (currentPath.substring(1) == realPathName) {
+                item.parentElement.classList.add("active");
+            }
+        });
+    }
+</script>

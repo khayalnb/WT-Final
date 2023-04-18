@@ -1,0 +1,194 @@
+.route {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.route a {
+  color: #adadad;
+}
+.route a:last-child {
+  margin-left: 5px;
+}
+.route div {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #adadad;
+  margin-left: 5px;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.total-price-box {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.total-price-box .total-price,
+.total-price-box .discount-price {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.total-price-box .total-price span,
+.total-price-box .discount-price span {
+  font-weight: 500;
+}
+.total-price-box .total-price span:first-child,
+.total-price-box .discount-price span:first-child {
+  color: #adadad;
+  font-size: 12px;
+}
+.total-price-box .total-price span:last-child,
+.total-price-box .discount-price span:last-child {
+  font-size: 14px;
+}
+.total-price-box .total-price img,
+.total-price-box .discount-price img {
+  width: 15px;
+}
+.total-price-box .discount-price {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #adadad;
+}
+.total-price-box .order-complate {
+  background-color: #383e42;
+  padding: 15px;
+  border-radius: 2.5px;
+}
+.total-price-box .order-complate .total-price span {
+  color: #fff;
+}
+.total-price-box .order-complate a {
+  color: #fff;
+  background-color: #8dc63f;
+  border-radius: 2.5px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 0px;
+  margin-top: 1rem;
+}
+
+.basket-list {
+  background-color: #fff;
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 2.5px;
+}
+.basket-list .basket-card {
+  display: flex;
+  padding: 25px 10px;
+  border-radius: 2.5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.basket-list .basket-card .card-image {
+  padding: 0px 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.basket-list .basket-card .card-image img {
+  width: 200px;
+  height: auto;
+}
+.basket-list .basket-card .product-info p {
+  font-size: 20px;
+}
+.basket-list .basket-card .product-info span {
+  margin-top: 0.5rem;
+  color: #8dc63f;
+  font-weight: 500;
+}
+.basket-list .basket-card .product-info span img {
+  width: 15px;
+}
+.basket-list .basket-card .product-info .offer {
+  width: 40%;
+}
+.basket-list .basket-card .product-info .offer-box {
+  margin-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #9f82f2;
+  border-radius: 2.5px;
+  padding: 5px 10px;
+}
+.basket-list .basket-card .product-info .offer-box span {
+  color: #9f82f2;
+}
+.basket-list .basket-card .product-info .product-detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.basket-list .basket-card .product-info .product-detail div {
+  display: flex;
+  flex-direction: column;
+}
+.basket-list .basket-card .product-info .product-detail div .color {
+  width: 20px;
+  height: 20px;
+  background-color: burlywood;
+  border-radius: 5px;
+}
+.basket-list .basket-card .product-info .product-detail div span:first-child {
+  color: #adadad;
+  font-weight: 400;
+}
+.basket-list .basket-card .product-info .product-detail div span:last-child {
+  color: #000;
+  margin-top: 0px;
+  font-size: 15px;
+}
+.basket-list .basket-card .close-box {
+  width: 30%;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.basket-list .basket-card .close-box .close {
+  display: flex;
+  justify-content: flex-end;
+}
+.basket-list .basket-card .close-box .close button {
+  border: none;
+  background-color: #fff;
+}
+.basket-list .basket-card .close-box .close button img {
+  width: 30px;
+}
+.basket-list .basket-card .close-box .product-count {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.basket-list .basket-card .close-box .product-count .minus-btn, .basket-list .basket-card .close-box .product-count .plus-btn {
+  height: 30px;
+  border: 1px solid #adadad;
+  border-radius: 2.5px;
+  padding: 0px 10px;
+  background-color: #f2f2f2;
+}
+.basket-list .basket-card .close-box .product-count .count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px 5px;
+  height: 30px;
+  border: 1px solid #adadad;
+  border-radius: 2.5px;
+  padding: 0px 7px;
+}
+.basket-list .basket-card .product-info {
+  width: -moz-fit-content;
+  width: fit-content;
+}

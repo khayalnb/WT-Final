@@ -1,0 +1,62 @@
+﻿@model SubCategory
+<style>
+    .form {
+        box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+        background-color: #fff;
+        border: 0 solid #d9dee3;
+        border-radius: 0.5rem;
+        padding: 24px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+</style>
+<div class="container-fluid flex-grow-1 container-p-y">
+    <form method="post" enctype="multipart/form-data">
+        <div class="form">
+            <div class="row">
+                @if (!string.IsNullOrWhiteSpace(ViewBag.Info))
+                {
+                    <div class="alert alert-danger" role="alert">
+                        @ViewBag.Info
+                    </div>
+                }
+            </div>
+            <div class="row ">
+
+
+                <div class="col-sm-6">
+                    <div>
+                        <input type="hidden" asp-for="Id" />
+                        <label asp-for="Name" class="form-label">Kateqoriya adı</label>
+                        <input asp-for="Name" class="form-control" type="text" disabled>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div>
+                        <label asp-for="Category.Name" class="form-label">Bağlı olduğu kateqoriya</label>
+                        <input asp-for="Category.Name" class="form-control" type="text" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 mt-3">
+                <a asp-controller="SubCategory" asp-action="Index" class="btn btn-secondary me-3">Geri qayıt</a>
+                @if (string.IsNullOrWhiteSpace(ViewBag.Info))
+                {
+                    <button type="submit" class="btn btn-primary ">Sil</button>
+                }
+
+
+            </div>
+        </div>
+    </form>
+
+
+</div>

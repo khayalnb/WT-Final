@@ -1,0 +1,61 @@
+﻿@model SubCategoryParentCategoryVM
+<style>
+    .form {
+        box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+        background-color: #fff;
+        border: 0 solid #d9dee3;
+        border-radius: 0.5rem;
+        padding: 24px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+</style>
+<div class="container-fluid flex-grow-1 container-p-y">
+    <form method="post" >
+        <div class="form">
+            <div class="row ">
+
+                <div class="col-sm-6">
+                    <div>
+                        <input type="hidden" asp-for="SubCategory.Id" />
+                        <input type="hidden" asp-for="SubCategory.Created_Date" />
+                        <label asp-for="SubCategory.Name" class="form-label">Kateqoriya adı</label>
+                        <input asp-for="SubCategory.Name" class="form-control" type="text">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div>
+                        <label class="form-label">Icon</label>
+                        <div>
+                            <select class="js-example-basic-single form-select" asp-for="SubCategory.CategoryId">
+                                @foreach (var item in Model.Categories)
+                                {
+                                    <option value="@item.Id">@item.Name</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mt-3">
+                    <label style="display:block;">Status - @(Model.SubCategory.IsActive ==true ? "Aktiv" : "Deaktiv") </label>
+                    <input class="isActice form-check-input" type="checkbox" asp-for="SubCategory.IsActive" />
+                </div>
+            </div>
+            <div class="col-sm-12 mt-3">
+                <a asp-controller="Subcategory" asp-action="Index" class="btn btn-secondary me-3">Geri qayıt</a>
+                <button type="submit" class="btn btn-primary ">Əlavə et</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

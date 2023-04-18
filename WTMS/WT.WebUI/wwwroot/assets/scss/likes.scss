@@ -1,0 +1,169 @@
+@import 'main_color';
+
+
+
+.route {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    a {
+        color: $gray;
+
+        &:last-child {
+            margin-left: 5px;
+        }
+    }
+
+    div {
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        background-color: $gray;
+        margin-left: 5px;
+    }
+
+}
+
+body {
+    background-color: $body-color;
+}
+
+.like-container {
+    margin: 0px 3px;
+    padding: 10px 5px;
+    background-color: $white;
+    border-radius: 5px;
+}
+
+.like-card {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    padding: 25px 10px;
+    border-radius: 2.5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    .product-image {
+        width: 15%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 65%;
+            height: auto;
+        }
+    }
+
+    .product-detail {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .category-name {
+            display: flex;
+            flex-direction: column;
+
+            span:first-child {
+                display: flex;
+                color: $gray;
+                font-size: 12.5px;
+            }
+
+        }
+
+        .info-product {
+            display: flex;
+
+            .color {
+                width: 20px;
+                height: 20px;
+                background-color: burlywood;
+                border-radius: 5px;
+                margin-top: 5px;
+            }
+
+            div {
+
+                &:first-child,
+                &:last-child {
+                    span:first-child {
+                        color: $gray;
+                    }
+                }
+
+                &:last-child {
+                    span {
+                        &:last-child {
+                            margin-top: 5px;
+                        }
+                    }
+
+                    display: flex;
+                    flex-direction: column;
+                    margin-right: 5rem;
+                }
+            }
+        }
+
+
+    }
+
+    .offer {
+        height: 100%;
+        padding-right: 1rem;
+        border-right: 1px solid rgba(27, 31, 35, 0.15);
+
+        .offer-box {
+            color: $c-price;
+            font-size: 14px;
+            border: 1px solid $c-price;
+            border-radius: 2.5px;
+            padding: 5px 10px;
+        }
+    }
+
+    .basket-price {
+        margin-left: 1rem;
+        width: 23%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            span {
+                color: $green;
+                font-weight: 600;
+                font-size: 17.5px;
+            }
+            button{
+                border: none;
+                background-color: $white;
+                
+                img{
+                    width: 30px;
+                }
+            }
+        }
+        button{
+            border: none;
+            background-color: $green;
+            border-radius: 2.5px;
+            padding: 5px 0px;
+            color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                margin-right: 5px;
+            }
+        }
+    }
+}

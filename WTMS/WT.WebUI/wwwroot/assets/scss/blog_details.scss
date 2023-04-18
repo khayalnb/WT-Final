@@ -1,0 +1,34 @@
+@import 'main_color';
+body{
+    background-color:#e6e7ea;
+}
+.blog-image {
+    width: 100%;
+
+    img {
+        border-radius: 10px;
+        display: inline-block;
+        width: 100%;
+    }
+}
+
+.title {
+    img {
+        position: relative;
+        top: -6px;
+        margin-left: 3px;
+    }
+}
+
+.date {
+    color: $gray;
+    img {
+        position: relative;
+        top: -5px;
+        margin-right: 5px;
+    }
+}
+.blog-text{
+    text-align: justify;
+    line-height: 30px;
+}

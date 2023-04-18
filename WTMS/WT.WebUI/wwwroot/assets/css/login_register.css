@@ -1,0 +1,95 @@
+body {
+  background-color: #f2f2f2;
+}
+
+.login-register-box {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 2.5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.login-register-box .box-title {
+  text-align: center;
+  border-bottom: 1px solid #8dc63f;
+  margin-bottom: 1rem;
+}
+.login-register-box .box-title h5 {
+  color: #8dc63f;
+}
+.login-register-box .form {
+  flex-direction: column;
+}
+.login-register-box .form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.login-register-box .form input {
+  width: 100%;
+  outline: none;
+  background-color: #f2f2f2;
+  padding: 7px 12.5px;
+  border-radius: 2.5px;
+  border: 1px solid gray;
+  font-size: 12.5px;
+}
+.login-register-box .form input::-webkit-outer-spin-button,
+.login-register-box .form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.login-register-box .form .password-box {
+  position: relative;
+}
+.login-register-box .form img {
+  width: 17px;
+  position: absolute;
+  right: 10px;
+  bottom: 27px;
+}
+.login-register-box .form .forward, .login-register-box .form input {
+  margin-bottom: 1rem;
+}
+.login-register-box .form .forward a {
+  font-size: 13px;
+  text-decoration: underline;
+}
+.login-register-box .form .submit-btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-register-box .form .submit-btn-box button[type=submit] {
+  background-color: #8dc63f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 17.5px;
+}
+.login-register-box .form .submit-btn-box button[type=submit]:active {
+  transform: scale(0.96);
+}
+
+.active::-moz-placeholder {
+  color: rgb(226, 70, 70) !important;
+}
+
+.active::placeholder {
+  color: rgb(226, 70, 70) !important;
+  font-size: 12px;
+}
+
+.forgot {
+  text-align: center !important;
+  width: 80% !important;
+  margin: 0 auto;
+  border: none !important;
+}
+.forgot span {
+  color: #adadad;
+}
+.forgot h5 {
+  margin-bottom: 1rem;
+  color: #000 !important;
+}

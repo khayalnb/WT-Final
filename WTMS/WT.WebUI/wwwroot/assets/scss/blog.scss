@@ -1,0 +1,71 @@
+@import 'main_color';
+
+.blog-svg-title {
+    color: $white;
+    position: absolute;
+    margin: 40px;
+}
+
+.blog-card {
+    width: 100%;
+    transition: 250ms all linear;
+
+    &:hover .blog-image img {
+        transition: 250ms all linear;
+        transform: scale(1.08);
+       
+    }
+
+    .blog-image {
+        transition: 250ms all linear;
+        width: 100%;
+        overflow: hidden;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        img {
+            transition: 250ms all linear;
+            display: inline-block;
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+    }
+
+    .blog-body {
+        transition: 250ms all linear;
+        border-top: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+
+        span,
+        h6,
+        p,a {
+            margin-top: 10px;
+        }
+        p{
+            color: $gray;
+            font-weight: 200;
+        }
+        .more-info{
+            position: relative;
+            z-index: 5;
+            transition: 250ms all linear;
+            width: fit-content;
+            cursor: pointer;
+            a{
+                color: $green;
+                cursor: pointer;
+            }
+            img{
+                transition: 250ms all linear;
+            }
+            &:hover img{
+              transform: translateX(5px);
+            }
+        }
+       
+    }
+}

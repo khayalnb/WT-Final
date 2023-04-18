@@ -1,0 +1,293 @@
+﻿@using WT.DAL.Data
+@inject AppDbContext db;
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Telecom</title>
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Swiper css configuration -->
+    <link rel="stylesheet" href="~/assets/css/swiper.css">
+    <!-- Owl slider -->
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/assets/css/owl.theme.default.min.css">
+    <!-- Custom CSS start-->
+    <link rel="stylesheet" href="~/assets/css/card_style.css">
+    <link rel="stylesheet" href="~/assets/css/font_family.css">
+    <link rel="stylesheet" href="~/assets/css/partner_style.css">
+    <!-- Custom CSS end -->
+    <style>
+        .category .category-item .category-logo img,
+        .category .category-item .category-logo svg {
+            width: 25px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 head-height d-flex align-items-center">
+                    <a class="wt-logo">
+                        <img src="~/assets/img/Logo.b9f47734dc8a7d48845278a3459f1134.svg" alt="">
+                        <img src="~/assets/img/wt.svg" alt="">
+                    </a>
+                    <span>|</span>
+                    <a href="tel:*2555"><strong>*2555</strong></a>
+                </div>
+                <div class="col-md-6 head-height d-flex align-items-center justify-content-end">
+                    <nav>
+                        <ul class="d-flex justify-content-end">
+                            <li><a href="corporate_sales.html">Korporativ satışlar</a></li>
+                            <li><a asp-controller="ShopAndOffice" asp-action="Index">Mağazalarımız</a></li>
+                            <li><a href="blogs.html">Bloq</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bottom">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-8 d-flex align-items-center">
+                        <div class="menu">
+                            <button class="wt-category">
+                                <img src="~/assets/img/category.svg" alt="">
+                                <span>Kateqoriyalar</span>
+                            </button>
+                            <div class="col-sm-1 category-box">
+                                <div class="category">
+                                    @foreach (var item in db.Categories)
+                                    {
+                                        <div class="category-item">
+                                            <div class="category-logo">
+                                                @*<img src="~/assets/img/category/phone_tablet.svg" alt="">*@
+                                                @Html.Raw(@item.Icon)
+                                            </div>
+                                            <span>@item.Name</span>
+                                            <div class="category-list">
+                                                <div class="list-category-and-brand">
+                                                    @foreach (var sc in db.SubCategories)
+                                                    {
+
+                                                        if (sc.CategoryId == item.Id)
+                                                        {
+                                                            <div class="category-brand">
+                                                                <a href="">@sc.Name</a>
+                                                                <ul>
+                                                                    @foreach (var brand in db.Brands)
+                                                                    {
+                                                                        @*if (brand.)
+                                                                        {
+                                                                            <li><a href="">Apple</a></li>
+
+                                                                        }*@
+
+                                                                    }
+                                                                </ul>
+                                                            </div>
+                                                            
+                                                        }
+                                                    }
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search-box d-flex justify-content-between align-items-center">
+                            <input type="text" placeholder="Məhsul axtar...">
+                            <a href="">
+                                <img src="~/assets/img/loop.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="right-area ps-5  w-100 d-flex align-items-center justify-content-between">
+                            <a class="company-btn" href="campaign_details.html">Kampaniyalar</a>
+                            <div class="operation-box d-flex justify-content-end align-items-center">
+                                <div class="operation">
+                                    <img class="person" src="~/assets/img/person.svg" alt="">
+                                    <div class="login-register">
+                                        <div class="fill">
+                                            <div class="fill-rotate">
+
+                                            </div>
+                                        </div>
+                                        <div class="title">
+                                            <span>Daha yaxşı təkliflər üçün hesabınıza giriş edin.</span>
+                                        </div>
+                                        <a class="login" href="">Giriş</a>
+                                        <a class="register" href="">Qeydiyyat</a>
+
+                                    </div>
+                                </div>
+                                <div class="operation">
+                                    <img src="~/assets/img/heart.svg" alt="">
+                                </div>
+                                <div class="operation">
+                                    <span class="basket-count">2</span>
+                                    <img src="~/assets/img/basket.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="mt-5">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img src="~/assets/img/foother.svg" alt="">
+                    <span>*2555</span>
+                    <ul>
+                        <li><a href="">NVIDIA</a></li>
+                        <li><a href="">Haqqimizda</a></li>
+                        <li><a href="">Magazalar</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h6>Telefonlar və planşetlər</h6>
+                    <ul>
+                        <li><a href="">Mobil telefonlar</a></li>
+                        <li><a href="">Planşetlər</a></li>
+                        <li><a href="">Ev telefonları</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h6>Telefonlar və planşetlər</h6>
+                    <ul>
+                        <li><a href="">Mobil telefonlar</a></li>
+                        <li><a href="">Planşetlər</a></li>
+                        <li><a href="">Ev telefonları</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h6>Telefonlar və planşetlər</h6>
+                    <ul>
+                        <li><a href="">Mobil telefonlar</a></li>
+                        <li><a href="">Planşetlər</a></li>
+                        <li><a href="">Ev telefonları</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h6>Telefonlar və planşetlər</h6>
+                    <ul>
+                        <li><a href="">Mobil telefonlar</a></li>
+                        <li><a href="">Planşetlər</a></li>
+                        <li><a href="">Ev telefonları</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h6>Telefonlar və planşetlər</h6>
+                    <ul>
+                        <li><a href="">Mobil telefonlar</a></li>
+                        <li><a href="">Planşetlər</a></li>
+                        <li><a href="">Ev telefonları</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <div class="border"></div>
+                </div>
+                <div class="col-sm-12  d-flex justify-content-between">
+                    <h6>Bütün hüquqlar qorunur © World Telecom 1998-2023</h6>
+                    <div class="group-icon">
+                        <a href=""><img src="~/assets/img/sosial/facebook.svg" alt=""></a>
+                        <a href=""><img src="~/assets/img/sosial/instagram.svg" alt=""></a>
+                        <a href=""><img src="~/assets/img/sosial/youtube.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        // $(".category").mouseover(function () {
+        //     $(".category-list").css('top', `${$(this).position().top}px`)
+        //     $(".category-list").css('top', `${$(this).position().left + 105}px`)
+        // })
+        var swiper = new Swiper(".mySwiper", {
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: true,
+            },
+            autoplay: {
+                delay: 2500,
+            },
+        });
+
+        AOS.init({ once: true });
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+
+
+        $(window).scroll(function () {
+            var hT = $('footer').offset().top,
+                hH = $('footer').outerHeight(),
+                wH = $(window).height(),
+                wS = $(window).scrollTop();
+            if (wH > (hT - wS)) {
+                $('.category').css('display', 'none');
+            }
+            else {
+                $('.category').css('display', 'block');
+            }
+        });
+    </script>
+</body>
+
+</html>

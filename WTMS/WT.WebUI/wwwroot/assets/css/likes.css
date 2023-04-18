@@ -1,0 +1,136 @@
+.route {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.route a {
+  color: #adadad;
+}
+.route a:last-child {
+  margin-left: 5px;
+}
+.route div {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #adadad;
+  margin-left: 5px;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.like-container {
+  margin: 0px 3px;
+  padding: 10px 5px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.like-card {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  padding: 25px 10px;
+  border-radius: 2.5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.like-card .product-image {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.like-card .product-image img {
+  width: 65%;
+  height: auto;
+}
+.like-card .product-detail {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.like-card .product-detail .category-name {
+  display: flex;
+  flex-direction: column;
+}
+.like-card .product-detail .category-name span:first-child {
+  display: flex;
+  color: #adadad;
+  font-size: 12.5px;
+}
+.like-card .product-detail .info-product {
+  display: flex;
+}
+.like-card .product-detail .info-product .color {
+  width: 20px;
+  height: 20px;
+  background-color: burlywood;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.like-card .product-detail .info-product div:first-child span:first-child, .like-card .product-detail .info-product div:last-child span:first-child {
+  color: #adadad;
+}
+.like-card .product-detail .info-product div:last-child {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5rem;
+}
+.like-card .product-detail .info-product div:last-child span:last-child {
+  margin-top: 5px;
+}
+.like-card .offer {
+  height: 100%;
+  padding-right: 1rem;
+  border-right: 1px solid rgba(27, 31, 35, 0.15);
+}
+.like-card .offer .offer-box {
+  color: #9f82f2;
+  font-size: 14px;
+  border: 1px solid #9f82f2;
+  border-radius: 2.5px;
+  padding: 5px 10px;
+}
+.like-card .basket-price {
+  margin-left: 1rem;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.like-card .basket-price div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.like-card .basket-price div span {
+  color: #8dc63f;
+  font-weight: 600;
+  font-size: 17.5px;
+}
+.like-card .basket-price div button {
+  border: none;
+  background-color: #fff;
+}
+.like-card .basket-price div button img {
+  width: 30px;
+}
+.like-card .basket-price button {
+  border: none;
+  background-color: #8dc63f;
+  border-radius: 2.5px;
+  padding: 5px 0px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.like-card .basket-price button img {
+  margin-right: 5px;
+}

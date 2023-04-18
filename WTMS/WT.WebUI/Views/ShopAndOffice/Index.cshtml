@@ -1,0 +1,70 @@
+﻿@model List<ShopAndOffice>
+<link rel="stylesheet" href="~/assets/css/shop.css">
+
+<section class="my-3">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="-col-sm-12">
+                <h3>Satış nöqtələrimiz</h3>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4">
+                    <div class="shop-card">
+                        <h6 class="mt-1">@item.Name</h6>
+                        <span class="mt-1">@item.Adress</span>
+                        <span class="mt-1">@item.Phone</span>
+                        <div class="location d-flex justify-content-end">
+                            <a target="_blank" href="@item.MapUrl">Xəritədə bax <img src="~/assets/img/locatiom.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<section class="my-3">
+    <div class="container">
+        <div class="row mb-3">
+            <div class="-col-sm-12">
+                <h3>Ofislərimiz</h3>
+            </div>
+        </div>
+        <div class="row">
+         
+            <div class="col-sm-4">
+                <div class="shop-card">
+                    <h6 class="mt-1">"Elmler Akademiyası" filialı</h6>
+                    <span class="mt-1">Zahid Xəlilov küç. 68Q</span>
+                    <span class="mt-1">*2525</span>
+                    <div class="location d-flex justify-content-end">
+                        <a target="_blank" href="https://www.google.com/maps?daddr=40.37469630749946,49.811458587668916">Xəritədə bax <img src="~/assets/img/locatiom.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="shop-card">
+                    <h6 class="mt-1">"Elmler Akademiyası" filialı</h6>
+                    <span class="mt-1">Zahid Xəlilov küç. 68Q</span>
+                    <span class="mt-1">*2525</span>
+                    <div class="location d-flex justify-content-end">
+                        <a target="_blank" href="https://www.google.com/maps?daddr=40.37469630749946,49.811458587668916">Xəritədə bax <img src="~/assets/img/locatiom.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="shop-card">
+                    <h6 class="mt-1">"Elmler Akademiyası" filialı</h6>
+                    <span class="mt-1">Zahid Xəlilov küç. 68Q</span>
+                    <span class="mt-1">*2525</span>
+                    <div class="location d-flex justify-content-end">
+                        <a target="_blank" href="https://www.google.com/maps?daddr=40.37469630749946,49.811458587668916">Xəritədə bax <img src="~/assets/img/locatiom.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

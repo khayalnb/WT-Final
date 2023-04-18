@@ -1,0 +1,63 @@
+.blog-svg-title {
+  color: #fff;
+  position: absolute;
+  margin: 40px;
+}
+
+.blog-card {
+  width: 100%;
+  transition: 250ms all linear;
+}
+.blog-card:hover .blog-image img {
+  transition: 250ms all linear;
+  transform: scale(1.08);
+}
+.blog-card .blog-image {
+  transition: 250ms all linear;
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.blog-card .blog-image img {
+  transition: 250ms all linear;
+  display: inline-block;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.blog-card .blog-body {
+  transition: 250ms all linear;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+}
+.blog-card .blog-body span,
+.blog-card .blog-body h6,
+.blog-card .blog-body p, .blog-card .blog-body a {
+  margin-top: 10px;
+}
+.blog-card .blog-body p {
+  color: #adadad;
+  font-weight: 200;
+}
+.blog-card .blog-body .more-info {
+  position: relative;
+  z-index: 5;
+  transition: 250ms all linear;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.blog-card .blog-body .more-info a {
+  color: #8dc63f;
+  cursor: pointer;
+}
+.blog-card .blog-body .more-info img {
+  transition: 250ms all linear;
+}
+.blog-card .blog-body .more-info:hover img {
+  transform: translateX(5px);
+}
