@@ -401,3 +401,5 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\Serilog.Sinks.File.dl
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\System.IO.Pipelines.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\ShopAndOffice\Index.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\CorporateSales\Index.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Blog\Index.cshtml.g.cs

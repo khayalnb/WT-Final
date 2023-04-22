@@ -1,0 +1,154 @@
+﻿@model CorporativeSale
+<style>
+    .dropdown-item:first-child {
+        color: green;
+    }
+
+    .dropdown-item:nth-child(2) {
+        color: dodgerblue;
+    }
+
+    .dropdown-item:last-child {
+        color: red;
+    }
+
+    .dropdown-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+        .dropdown-item i {
+            margin-right: 5px;
+        }
+
+    .padding {
+        margin: 1.5rem 1.5rem;
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .padding img {
+            margin-right: 5px;
+        }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .rounded-circle {
+        width: 50px;
+        height: 50px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    }
+    .red{
+        color:red;
+    }
+</style>
+<div class="container-fluid flex-grow-1 container-p-y">
+    <div class="card">
+        <div class="d-flex justify-content-between align-items-center my-1">
+            <h5 class="card-header">Məhsullar</h5>
+            @if (Model?.Content is null)
+            {
+                <a asp-controller="CorparativeSales" asp-action="Create" class="btn btn-primary padding">
+                    <lord-icon src="https://cdn.lordicon.com/mecwbjnp.json"
+                               colors="primary:#fff,secondary:#fff"
+                               trigger="hover"
+                               style="width:25px;height:25px;margin-right:5px;">
+                    </lord-icon>
+                    Əlavə et
+                </a>
+            }
+            else
+            {
+                <div class="d-flex">
+                    <a asp-controller="CorparativeSales" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary padding">
+                        <lord-icon src="https://cdn.lordicon.com/puvaffet.json"
+                                   colors="primary:#fff,secondary:#fff"
+                                   trigger="hover"
+                                   style="width:25px;height:25px;margin-right:5px;">
+                        </lord-icon>
+                        Düzəliş et
+                    </a>
+                    <a data-id="@Model.Id" class="btn btn-danger padding text-white" id="delete-btn">
+                        <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json"
+                                   colors="primary:#fff,secondary:#fff"
+                                   trigger="hover"
+                                   style="width:25px;height:25px;margin-right:5px;">
+                        </lord-icon>
+                        Sil
+                    </a>
+                </div>
+
+            }
+
+        </div>
+
+        <div class="card-body">
+            <div class="table-responsive text-nowrap">
+                @if (Model is not null)
+                {
+                    @Html.Raw(Model.Content);
+                }
+                else
+                {
+                    <div class="alert alert-warning" role="alert">
+                        @ViewBag.Info
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.8/sweetalert2.js" integrity="sha512-6OaQemSmGBesLcXnnqomD2dQdjQZADWvXdeVGWSOBUaJAy0UuGpQNQqmP63QBXtS6PW9xIJvLgHu5BZ6IYMwNg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js" integrity="sha512-6DC1eE3AWg1bgitkoaRM1lhY98PxbMIbhgYCGV107aZlyzzvaWCW1nJW2vDuYQm06hXrW0As6OGKcIaAVWnHJw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    let deleteBtn = document.getElementById("delete-btn");
+    deleteBtn.addEventListener("click", function () {
+        let productId = deleteBtn.getAttribute("data-id");
+        Swal.fire({
+            title: 'Bu mətini silmək istəyirsiniz?',
+            text: "Diqqət bu mətini geri qaytarmaq olmayacaq!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Bəli, mətini sil!',
+            cancelButtonText: "Xeyr"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: "POST",
+                    url: "/CorparativeSales/Delete",
+                    data: { id: productId },
+                    success: async function (res) {
+                        if (res.status) {
+                            await Swal.fire(
+                                'Silindi!',
+                                'Mətin müvəffəqiyyətlə silindi.',
+                                'success'
+                            )
+                            window.location.reload();
+                        } else {
+                            Swal.fire(
+                                'Xəta!',
+                                'Mətin müvəffəqiyyətlə silinmədi!',
+                                'error'
+                            )
+                        }
+
+                    }
+                });
+            }
+
+        });
+    });
+</script>

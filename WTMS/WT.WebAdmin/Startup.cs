@@ -1,13 +1,15 @@
-using ActiviKidWebUI.Helper;
+﻿using ActiviKidWebUI.Helper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using WT.BLL.Mapping;
@@ -32,7 +34,8 @@ namespace WT.WebAdmin
             {
                 opts.UseSqlServer(Configuration.GetConnectionString("WtConnectionString"));
                 //opts.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
-            }); 
+            });
+
             services.AddControllersWithViews(cfg =>
             {
                 cfg.ModelBinderProviders.Insert(0, new BooleanBinderProvider());
@@ -68,6 +71,24 @@ namespace WT.WebAdmin
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+            }).UseRequestLocalization(new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture("en-US"),
+                // Aşağıdakı kod ilə UTF-8 kodlamasını təyin edin
+                RequestCultureProviders = new List<IRequestCultureProvider>
+                {
+                   new QueryStringRequestCultureProvider(),
+                   new CookieRequestCultureProvider(),
+                   new AcceptLanguageHeaderRequestCultureProvider()
+                },
+                SupportedCultures = new List<CultureInfo>
+                {
+                   new CultureInfo("en-US"),
+                },
+                SupportedUICultures = new List<CultureInfo>
+                {
+                  new CultureInfo("az-Latn-AZ")
+                }
             });
         }
     }

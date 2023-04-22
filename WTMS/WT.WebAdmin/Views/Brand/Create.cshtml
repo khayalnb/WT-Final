@@ -18,6 +18,8 @@
         border-color: #007bff;
     }
 </style>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 <div class="container-fluid flex-grow-1 container-p-y">
     <form method="post">
         <div class="form">
@@ -45,6 +47,7 @@
                         <label class="form-label">Bağlı olduğu kateqoriya</label>
                         <div>
                             <select class="js-example-basic-single form-select" asp-for="SubCategoryId">
+                                <option>Seç</option>
                                 @foreach (var item in Model.SubCategories)
                                 {
                                     <option value="@item.Id">@item.Name</option>

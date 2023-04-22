@@ -1,0 +1,41 @@
+﻿@model List<Blog>
+
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <section class="my-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="blog-svg-title">Bloqlar.</h2>
+                    <img class="w-100" src="assets/img/blog/blog_head.svg" alt="">
+                </div>
+            </div>
+            <div class="row mt-4">
+                @foreach (var blog in Model)
+                {
+                    <div class="col-sm-3">
+                        <div class="blog-card">
+                            <div class="blog-image">
+                                <img src="/AdminPanelProjectFolderNameImages/BlogImages/@blog.ImageName" alt="">
+                            </div>
+                            <div class="blog-body">
+                                <div class="blog-date">
+                                    <img src="assets/img/blog/hourglass.svg" alt="">
+                                    <span>@blog.Created_Date</span>
+                                </div>
+
+                                <h6>@blog.Title</h6>
+                                <p>@blog.Text</p>
+                                <div class="more-info">
+                                    <a href="blog_details.html">Daha ətraflı </a>
+                                    <img src="assets/img/arrow-right.svg" alt="">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </section>

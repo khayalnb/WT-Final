@@ -53,9 +53,9 @@
                 <div class="col-md-6 head-height d-flex align-items-center justify-content-end">
                     <nav>
                         <ul class="d-flex justify-content-end">
-                            <li><a href="corporate_sales.html">Korporativ satışlar</a></li>
+                            <li><a asp-controller="CorporateSales" asp-action="Index">Korporativ satışlar</a></li>
                             <li><a asp-controller="ShopAndOffice" asp-action="Index">Mağazalarımız</a></li>
-                            <li><a href="blogs.html">Bloq</a></li>
+                            <li><a asp-controller="Blog" asp-action="Index" >Bloq</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -72,42 +72,36 @@
                             </button>
                             <div class="col-sm-1 category-box">
                                 <div class="category">
-                                    @foreach (var item in db.Categories)
+                                    @foreach (var category in db.Categories)
                                     {
                                         <div class="category-item">
                                             <div class="category-logo">
                                                 @*<img src="~/assets/img/category/phone_tablet.svg" alt="">*@
-                                                @Html.Raw(@item.Icon)
+                                                @Html.Raw(category.Icon)
                                             </div>
-                                            <span>@item.Name</span>
+                                            <span>@category.Name</span>
                                             <div class="category-list">
                                                 <div class="list-category-and-brand">
                                                     @foreach (var sc in db.SubCategories)
                                                     {
-
-                                                        if (sc.CategoryId == item.Id)
+                                                        if (sc.CategoryId == category.Id)
                                                         {
                                                             <div class="category-brand">
                                                                 <a href="">@sc.Name</a>
                                                                 <ul>
                                                                     @foreach (var brand in db.Brands)
                                                                     {
-                                                                        @*if (brand.)
+                                                                        if (brand.SubCategoryId == sc.Id)
                                                                         {
-                                                                            <li><a href="">Apple</a></li>
-
-                                                                        }*@
+                                                                            <li><a href="">@brand.Name</a></li>
+                                                                        }
 
                                                                     }
                                                                 </ul>
                                                             </div>
-                                                            
                                                         }
                                                     }
-
-
                                                 </div>
-
                                             </div>
                                         </div>
                                     }
@@ -285,6 +279,13 @@
             }
             else {
                 $('.category').css('display', 'block');
+            }
+        });
+
+        let categoryBrand = document.querySelectorAll(".category-brand > ul");
+        [...categoryBrand].forEach(item => {
+            if (item.childElementCount <= 0) {
+                item.parentElement.style.display = "none";
             }
         });
     </script>

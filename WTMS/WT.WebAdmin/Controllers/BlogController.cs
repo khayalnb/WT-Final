@@ -55,7 +55,7 @@ namespace WT.WebAdmin.Controllers
                 {
                     await itemDto.FormFile.CopyToAsync(fileStream);
                 }
-                itemDto.ImageName  = @"Documents/BlogImages/" + fileName + extension;
+                itemDto.ImageName  = fileName + extension;
                 await _genericService.AddAsync(itemDto);
                 TempData["success"] = "Product added succecfully";
                 return RedirectToAction("ActiveBlog");

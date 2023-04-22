@@ -1,0 +1,48 @@
+﻿@model CorporativeSale
+<style>
+    .form {
+        box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+        background-color: #fff;
+        border: 0 solid #d9dee3;
+        border-radius: 0.5rem;
+        padding: 24px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+</style>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<div class="container-fluid flex-grow-1 container-p-y">
+    <form method="post" accept-charset="UTF-8">
+        <div class="form">
+            <div class="row ">
+                <div class="col-sm-12 my-3">
+                    <label for="productParams" class="mb-3">Karparativ satış mətni :</label>
+                    <textarea style="display:block; width:100%;" class="form-control" id="content" asp-for="Content"></textarea>
+                </div>
+            </div>
+            <div class="col-sm-12 mt-3">
+                <a asp-controller="Brand" asp-action="Index" class="btn btn-secondary me-3">Geri qayıt</a>
+                <button type="submit" class="btn btn-primary ">Əlavə et</button>
+            </div>
+        </div>
+    </form>
+
+
+    ckeditor/contents.css">
+</div>
+
+@section script{
+    <partial name="_ValidationScriptsPartial" />
+   <script src="~/Assets/ckeditor_full/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace("content");
+    </script>
+} 

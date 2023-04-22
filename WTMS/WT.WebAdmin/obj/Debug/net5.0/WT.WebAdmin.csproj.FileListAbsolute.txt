@@ -464,8 +464,6 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\Produc
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\Shared\_Navbar.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\Shared\_SidebarMenu.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\OfferCompany\Index.cshtml.g.cs
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\ref\WT.WebAdmin.dll
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\staticwebassets\WT.WebAdmin.StaticWebAssets.xml
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\OfferCompany\Create.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\OfferCompany\Edit.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\OfferCompany\Delete.cshtml.g.cs
@@ -475,3 +473,8 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\ShopAn
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\AdressType\Index.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\AdressType\Create.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\ShopAndOffice\Create.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\CorparativeSales\Create.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\CorparativeSales\Index.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\ref\WT.WebAdmin.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\staticwebassets\WT.WebAdmin.StaticWebAssets.xml
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\ShopAndOffice\Edit.cshtml.g.cs

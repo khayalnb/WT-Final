@@ -48,5 +48,26 @@ namespace WT.WebAdmin.Controllers
             }
             return View(shopAndOffice);
         }
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            ShopAndOffice shopAndOffice = new();
+            shopAndOffice =await _shopAndOfficeService.GetAsync(i => i.Id == id);
+            shopAndOffice.AdressTypes = await _adressTypeService.GetAllAsync(a => a.IsActive == true);
+            return View(shopAndOffice);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(ShopAndOffice shopAndOffice)
+        {
+            if (ModelState.IsValid)
+            {
+                shopAndOffice.Updated_Date = DateTime.Now;
+                shopAndOffice.IsActive = true;
+                _shopAndOfficeService.Update(shopAndOffice);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(shopAndOffice);
+        }
     }
 }

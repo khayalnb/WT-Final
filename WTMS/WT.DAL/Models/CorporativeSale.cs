@@ -9,7 +9,7 @@ namespace WT.DAL.Models
 {
     public class CorporativeSale:BaseEntity.BaseEntity<int>
     {
-        [Column (TypeName ="text")]
-        public string  Content { get; set; }
+        [Column (TypeName ="ntext")]
+        public string Content { get; set; }
     }
 }
