@@ -19,11 +19,18 @@ namespace WT.WebUI.Controllers
         public async Task<IActionResult> Index()
         {
             var data = await _appDbContext.Blogs.Where(b => b.IsActive == true).ToListAsync();
+            if (data.Count <= 0)
+            {
+                ViewBag.Info = "Blog siyahınız boşdur";
+                return View();
+            }
             return View(data);
+           
         }
-        public IActionResult BlogDetails()
+        public async Task<IActionResult> BlogDetails(int ? id)
         {
-            return View();
+            var data =await _appDbContext.Blogs.Where(b => b.Id == id).FirstOrDefaultAsync();
+            return View(data);
         }
     }
 }

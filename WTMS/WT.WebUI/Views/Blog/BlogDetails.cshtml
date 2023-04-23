@@ -1,0 +1,28 @@
+﻿@model Blog
+    <link rel="stylesheet" href="~/assets/css/blog_details.css">
+    <section class="my-3">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-sm-12 d-flex justify-content-between">
+                    <div class="title d-flex ">
+                        <h5>@Model.Title ...</h5>
+                        <img src="~/assets/img/blog/pencil.svg" alt="">
+                    </div>
+                    <div class="date d-flex">
+                        <img src="~/assets/img/blog/calendar-event.svg" alt="">
+                        <h5>@Model.Created_Date?.ToString("MM/dd/yyyy")</h5>
+                    </div>
+                </div>
+                <div class="col-sm-6 mt-3">
+                    <div class="blog-image">
+                        <img src="/AdminPanelProjectFolderNameImages/BlogImages/@Model.ImageName" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-6 mt-3">
+                    <p class="blog-text">
+                        @Model.Text
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>

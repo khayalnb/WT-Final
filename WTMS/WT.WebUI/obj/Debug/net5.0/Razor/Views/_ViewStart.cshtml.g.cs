@@ -33,8 +33,15 @@ using WT.DAL.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\Views\_ViewImports.cshtml"
+using WT.WebUI.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5b9925726478b030a5bbf39fffeffeca25a88c4e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5f11d1fb80e8b77056f4a918feb7114a095d4384", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

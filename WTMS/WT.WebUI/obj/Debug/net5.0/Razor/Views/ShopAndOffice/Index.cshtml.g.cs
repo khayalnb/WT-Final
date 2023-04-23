@@ -33,8 +33,15 @@ using WT.DAL.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\Views\_ViewImports.cshtml"
+using WT.WebUI.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"25b1d8773fc491f7ad8169f8c0d5ea6cc79d9d83", @"/Views/ShopAndOffice/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5b9925726478b030a5bbf39fffeffeca25a88c4e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5f11d1fb80e8b77056f4a918feb7114a095d4384", @"/Views/_ViewImports.cshtml")]
     public class Views_ShopAndOffice_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<ShopAndOffice>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -65,7 +72,7 @@ using WT.DAL.Models;
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "25b1d8773fc491f7ad8169f8c0d5ea6cc79d9d834648", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "25b1d8773fc491f7ad8169f8c0d5ea6cc79d9d834824", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -125,7 +132,7 @@ WriteAttributeValue("", 865, item.MapUrl, 865, 12, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">Xəritədə bax ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "25b1d8773fc491f7ad8169f8c0d5ea6cc79d9d837860", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "25b1d8773fc491f7ad8169f8c0d5ea6cc79d9d838036", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -205,7 +212,7 @@ WriteAttributeValue("", 1888, item.MapUrl, 1888, 12, false);
 #nullable disable
             EndWriteAttribute();
             WriteLiteral(">Xəritədə bax ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "25b1d8773fc491f7ad8169f8c0d5ea6cc79d9d8311418", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "25b1d8773fc491f7ad8169f8c0d5ea6cc79d9d8311594", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

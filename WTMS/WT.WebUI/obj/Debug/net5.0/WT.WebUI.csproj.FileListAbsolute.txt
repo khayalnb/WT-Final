@@ -403,3 +403,6 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\System.Runtime.Compil
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\ShopAndOffice\Index.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\CorporateSales\Index.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Blog\Index.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Blog\BlogDetails.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Campaign\CompaignDetails.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Campaign\Index.cshtml.g.cs
