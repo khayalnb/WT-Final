@@ -12,4 +12,4 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.DAL\obj\Debug\net5.0\ref\WT.DAL.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.DAL\obj\Debug\net5.0\WT.DAL.pdb
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.DAL\obj\Debug\net5.0\WT.DAL.genruntimeconfig.cache
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.DAL\obj\Debug\net5.0\WT.DAL.csproj.AssemblyReference.cache
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.DAL\bin\Debug\net5.0\ref\WT.DAL.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.DAL\obj\Debug\net5.0\refint\WT.DAL.dll

@@ -12,4 +12,4 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.csproj.CopyCompl
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\ref\WT.BLL.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\WT.BLL.pdb
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\bin\Debug\net5.0\ref\WT.BLL.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.BLL\obj\Debug\net5.0\refint\WT.BLL.dll

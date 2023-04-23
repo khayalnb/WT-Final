@@ -5,7 +5,6 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\WT.WebUI.deps.json
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\WT.WebUI.runtimeconfig.json
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\WT.WebUI.runtimeconfig.dev.json
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\WT.WebUI.dll
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\ref\WT.WebUI.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\WT.WebUI.pdb
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -326,7 +325,6 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\WT.WebUI.MvcApplicati
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\WT.WebUI.RazorAssemblyInfo.cache
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\WT.WebUI.RazorAssemblyInfo.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\WT.WebUI.StaticWebAssets.Manifest.cache
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\WT.WebUI.StaticWebAssets.xml
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\scopedcss\bundle\WT.WebUI.styles.css
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\WT.WebUI.TagHelpers.input.cache
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\WT.WebUI.TagHelpers.output.cache
@@ -404,5 +402,11 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\ShopAndOf
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\CorporateSales\Index.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Blog\Index.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Blog\BlogDetails.cshtml.g.cs
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Campaign\CompaignDetails.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Campaign\Index.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\WT.WebUI.StaticWebAssets.Pack.cache
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\msbuild.WT.WebUI.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\msbuild.build.WT.WebUI.props
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.WT.WebUI.props
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.WT.WebUI.props
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\refint\WT.WebUI.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Campaign\CampaignDetails.cshtml.g.cs
