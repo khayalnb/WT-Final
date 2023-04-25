@@ -10,46 +10,30 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 ">
-                    <div class="company-card d-flex">
-                        <div class="card-image">
-                            <img src="assets/img/company/1x1 banner elmler kampaniya.jpg" alt="">
-                        </div>
-                        <div class="company-info">
-                            <h5>Yeni açılmış “Elmlər Akademiyası”</h5>
-                            <p>
-                                Yeni açılmış “Elmlər Akademiyası” filialında, 21-28 fevral tarixlərində, seçilmiş
-                                məhsullara İlkin ödənişsiz, FAİZSİZ və KOMİSSİYASIZ 18 ayadək kredit imkanını əldə
-                                ət!🎉 Üstəlik <span>...</span>
-                            </p>
-                            <div class="more-info-and-date">
-                                <time>Tarix: 21 - 28 Fevral</time>
-                                <a href="campaign_details.html">Daha ətraflı</a>
+                @if (Model is not null)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-sm-6 mb-3">
+                            <div class="company-card d-flex">
+                                <div class="card-image">
+                                    <img src="/AdminPanelProjectFolderNameImages/OfferCompanyImage/@item.ImageName" alt="">
+                                </div>
+                                <div class="company-info">
+                                    <h5>@item.Title</h5>
+                                    <p>
+                                        @item.Text <span>...</span>
+                                    </p>
+                                    <div class="more-info-and-date">
+                                        <time>Tarix: 21 - 28 Fevral</time>
+                                        <a asp-controller="Campaign" asp-action="CampaignDetails" asp-route-id="@item.Id">Daha ətraflı</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 ">
-                    <div class="company-card d-flex">
-                        <div class="card-image">
-                            <img src="assets/img/company/1x1 banner elmler kampaniya.jpg" alt="">
-                        </div>
-                        <div class="company-info">
-                            <h5>Yeni açılmış “Elmlər Akademiyası”</h5>
-                            <p>
-                                Yeni açılmış “Elmlər Akademiyası” filialında, 21-28 fevral tarixlərində, seçilmiş
-                                məhsullara İlkin ödənişsiz, FAİZSİZ və KOMİSSİYASIZ 18 ayadək kredit imkanını əldə
-                                ət!🎉 Üstəlik <span>...</span>
-                            </p>
-                            <div class="more-info-and-date">
-                                <time>Tarix: 21 - 28 Fevral</time>
-                                <a href="campaign_details.html">Daha ətraflı</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                    }
+                }
             </div>
-
-
         </div>
     </section>

@@ -44,8 +44,7 @@ namespace WT.DAL.Data
               .HasIndex(c => c.Name)
               .IsUnique();
 
-            modelBuilder.HasDefaultSchema("dbo"); // Default schema, istənilən schema adı ilə əvəz oluna bilər
-            modelBuilder.UseCollation("Latin1_General_CI_AS");
+            
         }
        
     }

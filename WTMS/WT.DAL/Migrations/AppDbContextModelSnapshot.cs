@@ -192,7 +192,7 @@ namespace WT.DAL.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Content")
-                        .HasColumnType("text");
+                        .HasColumnType("ntext");
 
                     b.Property<DateTime?>("Created_Date")
                         .HasColumnType("datetime2");
@@ -389,6 +389,9 @@ namespace WT.DAL.Migrations
 
                     b.Property<DateTime?>("Updated_Date")
                         .HasColumnType("datetime2");
+
+                    b.Property<int?>("ViewCount")
+                        .HasColumnType("int");
 
                     b.Property<byte?>("WarrantyYearNumber")
                         .IsRequired()

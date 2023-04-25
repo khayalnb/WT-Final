@@ -33,6 +33,34 @@
         .category .category-item .category-logo svg {
             width: 25px;
         }
+        .like-count {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: red;
+            border-radius: 100%;
+            position: absolute;
+            left: 15px;
+            bottom: 12px;
+            z-index: 1;
+            font-size: 15px;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #ebebeb;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #6d6d6d;
+        }
     </style>
 
 
@@ -43,19 +71,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 head-height d-flex align-items-center">
-                    <a class="wt-logo">
+                    <a class="wt-logo" asp-controller="Home" asp-action="Index">
                         <img src="~/assets/img/Logo.b9f47734dc8a7d48845278a3459f1134.svg" alt="">
                         <img src="~/assets/img/wt.svg" alt="">
                     </a>
                     <span>|</span>
-                    <a href="tel:*2555"><strong>*2555</strong></a>
+                    <a id="phoneLink"><strong>*2555</strong></a>
                 </div>
                 <div class="col-md-6 head-height d-flex align-items-center justify-content-end">
                     <nav>
                         <ul class="d-flex justify-content-end">
                             <li><a asp-controller="CorporateSales" asp-action="Index">Korporativ satışlar</a></li>
                             <li><a asp-controller="ShopAndOffice" asp-action="Index">Mağazalarımız</a></li>
-                            <li><a asp-controller="Blog" asp-action="Index" >Bloq</a></li>
+                            <li><a asp-controller="Blog" asp-action="Index">Bloq</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -135,8 +163,12 @@
 
                                     </div>
                                 </div>
-                                <div class="operation">
-                                    <img src="~/assets/img/heart.svg" alt="">
+                                <div class="operation" style="position:relative;">
+                                    <a asp-controller="CustomerOperation" asp-action="LikeIndex">
+                                        <span class="like-count" id="like-count">0</span>
+                                        <img src="~/assets/img/heart.svg" style="width:23px;" alt="">
+                                    </a>
+
                                 </div>
                                 <div class="operation">
                                     <span class="basket-count">2</span>
@@ -224,21 +256,24 @@
 
     </footer>
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="~/assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="~/assets/js/main.js"></script>
+    <script src="~/assets/js/like_product.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="~/assets/js/owl.carousel.min.js"></script>
 
-    <!-- Initialize Swiper -->
+
     <script>
-        // $(".category").mouseover(function () {
-        //     $(".category-list").css('top', `${$(this).position().top}px`)
-        //     $(".category-list").css('top', `${$(this).position().left + 105}px`)
-        // })
+        document.getElementById("phoneLink").addEventListener("click", function (e) {
+            e.preventDefault();
+            var phoneNumber = "*2555";
+            window.location.href = "tel:" + phoneNumber;
+        });
+
         var swiper = new Swiper(".mySwiper", {
             scrollbar: {
                 el: ".swiper-scrollbar",
@@ -250,19 +285,24 @@
         });
 
         AOS.init({ once: true });
+
         $('.owl-carousel').owlCarousel({
-            loop: true,
+            loop: false,
             margin: 10,
             nav: true,
+            dots: true,
             responsive: {
                 0: {
                     items: 1
                 },
                 600: {
+                    items: 2
+                },
+                960: {
                     items: 3
                 },
-                1000: {
-                    items: 5
+                1200: {
+                    items: 4
                 }
             }
         })
@@ -288,6 +328,7 @@
             }
         });
     </script>
+    @RenderSection("scripts", required: false)
 </body>
 
 </html>

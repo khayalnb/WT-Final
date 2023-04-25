@@ -403,10 +403,8 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Corporate
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Blog\Index.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Blog\BlogDetails.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Campaign\Index.cshtml.g.cs
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\WT.WebUI.StaticWebAssets.Pack.cache
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\msbuild.WT.WebUI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\msbuild.build.WT.WebUI.props
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\msbuild.buildMultiTargeting.WT.WebUI.props
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\msbuild.buildTransitive.WT.WebUI.props
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\refint\WT.WebUI.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Campaign\CampaignDetails.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\ref\WT.WebUI.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\WT.WebUI.StaticWebAssets.xml
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Shared\_ProductPartial.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\CustomerOperation\LikeIndex.cshtml.g.cs

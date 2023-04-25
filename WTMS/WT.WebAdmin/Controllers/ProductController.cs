@@ -137,7 +137,8 @@ namespace WT.WebAdmin.Controllers
                            },
                            Images = p.Images.Select(i => new Image { 
                                Id = i.Id,
-                               ImageName = i.ImageName 
+                               ImageName = i.ImageName ,
+                               MainImage=i.MainImage
                            }).ToList()
                        }).FirstOrDefault();
 

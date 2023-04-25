@@ -43,6 +43,7 @@ namespace WT.WebAdmin
             services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddAutoMapper(typeof(CustomMapping));
             services.RegisterAppServices();
+            //services.AddHttpContextAccessor();
 
         }
 
@@ -71,24 +72,6 @@ namespace WT.WebAdmin
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-            }).UseRequestLocalization(new RequestLocalizationOptions
-            {
-                DefaultRequestCulture = new RequestCulture("en-US"),
-                // Aşağıdakı kod ilə UTF-8 kodlamasını təyin edin
-                RequestCultureProviders = new List<IRequestCultureProvider>
-                {
-                   new QueryStringRequestCultureProvider(),
-                   new CookieRequestCultureProvider(),
-                   new AcceptLanguageHeaderRequestCultureProvider()
-                },
-                SupportedCultures = new List<CultureInfo>
-                {
-                   new CultureInfo("en-US"),
-                },
-                SupportedUICultures = new List<CultureInfo>
-                {
-                  new CultureInfo("az-Latn-AZ")
-                }
             });
         }
     }

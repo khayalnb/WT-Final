@@ -1,4 +1,4 @@
-const categoryBtn = document.getElementsByClassName("wt-category")[0],
+﻿const categoryBtn = document.getElementsByClassName("wt-category")[0],
   categoryMenu = document.getElementsByClassName("category-box")[0],
   sliderBox = document.getElementsByClassName("width-change-box");
 
@@ -13,17 +13,18 @@ categoryBtn.addEventListener("click", function () {
 
 const heartBox = document.getElementsByClassName("heart-box");
 
-[...heartBox].forEach((item) => {
-  item.addEventListener("click", function () {
-    if (this.children[0].dataset.heart == 1) {
-      this.children[0].src = "assets/img/redHeart.svg";
-      this.children[0].dataset.heart = 2;
-    } else {
-      this.children[0].src = "assets/img/heart.svg";
-      this.children[0].dataset.heart = 1;
-    }
-  });
-});
+//[...heartBox].forEach((item) => {
+//  item.addEventListener("click", function () {
+//    if (this.children[0].dataset.like == 1) {
+//      this.children[0].src = "assets/img/redHeart.svg";
+//      this.children[0].dataset.like = 2;
+//    } else {
+//      this.children[0].src = "assets/img/heart.svg";
+//      this.children[0].dataset.like = 1;
+//    }
+//  });
+//});
+
 
 
 

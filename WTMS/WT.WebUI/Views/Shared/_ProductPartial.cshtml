@@ -1,0 +1,47 @@
+﻿@model List<Product>
+
+@foreach (var item in Model)
+{
+    decimal percent = item.Price / 12;
+    percent = Math.Round(percent, 2);
+    <div class="col-sm-3 mb-4">
+        <div class="product-card">
+            <div class="product-image">
+                <div class="d-flex justify-content-end heart-box">
+                    <img data-heart-id="@item.Id" class="like-btn" data-like="1" src="~/assets/img/heart.svg" alt="">
+                </div>
+                <img src="/AdminPanelProjectFolderNameImages/ProductImage/@item.Images.FirstOrDefault().ImageName" alt="">
+            </div>
+            <div class="product-color">
+
+            </div>
+            <div class="product-info">
+                <span class="product-category">
+                    <img src="~/assets/img/circle.svg" alt="">
+                    @item.SubCategory.Name
+                </span>
+                <span class="product-name">@item.Brand.Name  @item.Name</span>
+            </div>
+            <div class="product-price">
+                <div class="cash">
+                    <span class="cash">@item.Price</span>
+                    <img src="~/assets/img/valuta.svg" alt="">
+                </div>
+                <div class="credit">
+                    <span class="month">12 ay</span>
+                    <span class="payment">
+                        @percent
+                        <img src="~/assets/img/purpleValuta.svg" alt="">
+                    </span>
+                </div>
+
+            </div>
+            <div class="product-sale-basket">
+                <button>İndi al</button>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="~/assets/img/sebet.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+}
