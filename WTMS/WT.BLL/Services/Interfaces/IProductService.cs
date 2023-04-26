@@ -11,5 +11,6 @@ namespace WT.BLL.Services.Interfaces
     public interface IProductService : IGlobalService<Product>
     {
         Task<List<Product>> GetProducts();
+       
     }
 }

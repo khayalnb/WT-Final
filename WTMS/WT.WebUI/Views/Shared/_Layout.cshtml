@@ -115,13 +115,13 @@
                                                         if (sc.CategoryId == category.Id)
                                                         {
                                                             <div class="category-brand">
-                                                                <a href="">@sc.Name</a>
+                                                                <a asp-route-id="@sc.Id" asp-controller="Product" asp-action="GetBySubCategoryId">@sc.Name</a>
                                                                 <ul>
                                                                     @foreach (var brand in db.Brands)
                                                                     {
                                                                         if (brand.SubCategoryId == sc.Id)
                                                                         {
-                                                                            <li><a href="">@brand.Name</a></li>
+                                                                            <li><a asp-route-id="@brand.Id" asp-controller="Product" asp-action="GetByBrandId">@brand.Name</a></li>
                                                                         }
                                                                     }
                                                                 </ul>

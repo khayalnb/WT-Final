@@ -1,0 +1,264 @@
+﻿@model ProductVM
+@using WT.DAL.Data;
+
+@{ 
+    var products = Model.Products;
+    var brands = Model.Brands;
+    var filter = Model.ProductFilterVM;
+    string link = Model.Path;
+}
+<style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    .price-box {
+        text-align: center;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    }
+    .price-input-box{
+        margin-top:1rem;
+        display:flex;
+        justify-content:space-between;
+    }
+    .price-input-box input {
+        margin-bottom: 10px;
+        width: 45%;
+        outline: none;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        border-radius: 2.5px;
+        padding: 5px;
+    }
+    .price-input-box input::placeholder{
+        font-size:10px;
+    }
+
+    .brand-filter-box {
+        padding: 10px;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        margin-bottom:2rem;
+        text-align:center;
+    }
+    .checkbox {
+        width: 100%;
+        text-align: start;
+        display: flex;
+        align-items: center;
+    }
+        .checkbox input {
+            width: 17px;
+            height: 17px;
+            accent-color: #8dc63f;
+            margin-right: 10px;
+            fill: #ff0000;
+        }
+    #price-level {
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        border:none;
+        outline:none;
+        border-radius:2.5px;
+        padding:5px;
+    }
+    .cash{
+        font-size:15px !important;
+    }
+    .filter-btn {
+        background-color: #8dc63f;
+        width: 80%;
+        color: #fff;
+        border: none;
+        padding:5px;
+        border-radius:5px;
+    }
+</style>
+<section>
+    <div class="container mt-5 ">
+        <div class="row d-flex justify-content-end">
+            <div class="col-sm-12 width-change-box d-flex justify-content-between align-items-center">
+                <h4>Məhsullar</h4>
+                <select id="price-level">
+                    <option value="false">Ucuzdan bahaya</option>
+                    <option value="true">Bahadan ucuza</option>
+                </select>
+            </div>
+        </div>
+        <div class="row justify-content-end mt-4">
+            <div class="col-sm-2">
+                <form action="@link" method="get">
+                    <input type="hidden" id="lessToMore" asp-for="ProductFilterVM.LessToMore" />
+                    <div class="brand-container">
+                        @if (filter?.BrandSearch is not null)
+                        {
+                            int count = 0;
+                            @foreach (var item in filter.BrandSearch)
+                            {
+                                <input type="hidden" name="ProductFilterVM.BrandSearch[@count]" value="@item" />
+                                count++;
+                            }
+                        }
+                    </div>
+                    <div class="brand-filter-box">
+                        <h6>Marka</h6>
+                        @foreach (var item in brands)
+                        {
+                            <div class="checkbox">
+
+                                <input class="brand-input" data-id="@item.Id" checked="@(filter?.BrandSearch?.Any(s => s == item.Id) == true ? "checked": null)" type="checkbox" />
+                                <span style="font-size:15px;">@item.Name</span>
+                            </div>
+                        }
+
+                    </div>
+                    <div class="price-box">
+                        <h6>Qiymət (AZN)</h6>
+                        <div class="price-input-box">
+                            <input asp-for="ProductFilterVM.MinPrice" type="number" placeholder="azdan" />
+                            <input  asp-for="ProductFilterVM.MaxPrice" type="number" placeholder="çoxa" />
+                        </div>
+                    </div>
+                    <div style="width:100%; text-align:center;margin-top:2rem;">
+                        <button type="submit" class="filter-btn">Axtar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-10 width-change-box">
+                <div class="row " id="box">
+                        @if (products?.Count > 0)
+                        {
+                            @foreach (var item in products)
+                            {
+                                decimal percent = item.Price / 12;
+                                percent = Math.Round(percent, 2);
+
+                                <div class="col-sm-3 mb-4">
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <div class="d-flex justify-content-end heart-box">
+                                                <img data-heart-id="@item.Id" data-like="1" class="like-btn" src="~/assets/img/heart.svg" alt="">
+                                            </div>
+                                            @{
+                                                var img = @item.Images.Where(i => i.MainImage == true).FirstOrDefault();
+                                            }
+                                            <img src="/AdminPanelProjectFolderNameImages/ProductImage/@img.ImageName" alt="">
+                                        </div>
+                                        <div class="product-color">
+
+                                        </div>
+                                        <div class="product-info">
+                                            <span class="product-category">
+                                                <img src="~/assets/img/circle.svg" alt="">
+                                                @item.SubCategory.Name
+                                            </span>
+                                            <span class="product-name">@item.Brand.Name  @item.Name</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <div class="cash">
+                                                <span class="cash">@item.Price</span>
+                                                <img src="~/assets/img/valuta.svg" alt="">
+                                            </div>
+                                            <div class="credit">
+                                                <span class="month">12 ay</span>
+                                                <span class="payment">
+                                                    @percent<img src="~/assets/img/purpleValuta.svg"
+                                                                 alt="">
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <div class="product-sale-basket">
+                                            <button>İndi al</button>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <img src="~/assets/img/sebet.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+
+
+                        }
+                        else
+                        {
+                            <div class="alert alert-secondary" role="alert">
+                                Bu məhsul siyahsı boşdur !
+                            </div>
+                        }
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center my-4">
+            <div class="col-sm-2 d-flex justify-content-center">
+                <input type="hidden" id="pCount" value="@ViewBag.Count" />
+                <button class="btn btn-light " id="loadMore"
+                        style="box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;">
+                    Daha
+                    çox
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section scripts{
+    <script>
+        $(document).ready(() => {
+            $(document).on("change", ".brand-input", function (e) {
+                let brands = getCheckBrands();
+                console.log(brands)
+                const id = parseInt($(this).attr("data-id"));
+                if (brands.includes(id)){
+                    removeBrand(id);
+                } else {
+                    addBrand(id);
+                }
+                updateName()
+            })
+
+            function getCheckBrands() {
+                let result = [];
+                $.each($(".brand-container input"), function (key, value) {
+                    console.log($(this))
+                    result.push(parseInt($(this).val()));
+                })
+                return result;
+            }
+
+            function removeBrand(id) {
+                $.each($(".brand-container input"), function (key, value) {
+                    if (parseInt($(this).val()) === parseInt(id)) {
+                        $(this).remove();
+                    }
+                })
+            }
+
+            function addBrand(id) {
+                const count = $(".brand-container input").length;
+                $(".brand-container").append(` <input type="hidden" value="${id}" />`)
+            }
+
+            function updateName() {
+                let count = 0;
+                $.each($(".brand-container input"), function (key, value) {
+                    $(this).attr("name", `ProductFilterVM.BrandSearch[${count}]`);
+                    count++;
+                })
+            }
+
+            $("#price-level").on("change", function () {
+                var selectedValue = $(this).val();
+                $("#lessToMore").val(selectedValue);
+            });
+        })
+    </script>
+ }

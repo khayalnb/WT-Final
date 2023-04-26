@@ -141,7 +141,7 @@
         <div class="form">
             <div class="row ">
                 <div class="col-sm-12">
-                    <h5  >Məhsul Yarat</h5>
+                    <h5>Məhsul Yarat</h5>
                 </div>
             </div>
             <div class="row ">
@@ -259,24 +259,27 @@
                     <div>
                         <label asp-for="FormFiles" class="form-label">Şəkil seç</label>
                         <input accept="image/*" asp-for="FormFiles" class="form-control" type="file" multiple>
-                        <span asp-validation-for="FormFiles" class="text-danger"></span>
-
+                        <div class="mt-2">
+                            <span asp-validation-for="FormFiles" class="text-danger"></span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-12">
                     <label for="productParams">Product Parameters:</label>
                     <textarea style="display:block; width:100%;" class="form-control" asp-for="TextParametr"></textarea>
+                    <div class="mt-2">
+                        <span asp-validation-for="TextParametr" class="text-danger"></span>
+                    </div>
                 </div>
-            </div>
-            <div class="col-sm-12 mt-3 ">
-                <a asp-controller="Product" asp-action="Index" class="btn btn-secondary me-3">Geri qayıt</a>
-                <button type="submit" class="btn btn-primary ">Əlavə et</button>
+                <div class="col-sm-12 mt-3 ">
+                    <a asp-controller="Product" asp-action="Index" class="btn btn-secondary me-3">Geri qayıt</a>
+                    <button type="submit" class="btn btn-primary ">Əlavə et</button>
+                </div>
             </div>
         </div>
     </form>
-
-
 </div>
+
 <style>
     .select2-container--default .select2-selection--single {
         background-color: #fff;
@@ -298,11 +301,11 @@
     <script>
         $(document).ready(function () {
             $('.js-example-basic-single').select2({ width: '100%' });
-            async function b() {
+            async function loading() {
                 await $("#form-box").show();
                 await $(".lds-default").hide();
             }
-            b();
+            loading();
         });
     </script>
 }

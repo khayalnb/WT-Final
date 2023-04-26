@@ -29,7 +29,6 @@ namespace WT.DAL.Models
         public SubCategory SubCategory { get; set; }
         public int? ViewCount { get; set; }
         public ICollection<ProductParametr> ProductParametrs { get; set; }
-        [Required(ErrorMessage = "Kampaniya boş ola bilməz")]
         public int? OfferCompanyId { get; set; }//+
         public OfferCompany OfferCompany { get; set; }
         [NotMapped]
