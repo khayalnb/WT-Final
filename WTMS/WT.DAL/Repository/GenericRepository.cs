@@ -62,9 +62,6 @@ namespace WT.DAL.Repository
 
         public TEntity Update(TEntity item)
         {
-            var dbEntity = _entities.Find(item.Id);
-            item.Created_Date = dbEntity.Created_Date;
-            // item.UpdateDate = DateTime.Now;        
             _entities.Update(item);
             _dbContext.SaveChanges();
             return item;

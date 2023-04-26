@@ -478,3 +478,4 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\Corpar
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\ref\WT.WebAdmin.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\staticwebassets\WT.WebAdmin.StaticWebAssets.xml
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\ShopAndOffice\Edit.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\Blog\Delete.cshtml.g.cs

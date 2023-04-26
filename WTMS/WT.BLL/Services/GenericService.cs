@@ -63,7 +63,6 @@ namespace WT.BLL.Services
         public TDto Update(TDto item)
         {
             TEntity entity = _mapper.Map<TEntity>(item);
-            entity.SetValue<TEntity>("UpdateDate", DateTime.Now);
             TEntity dbEntity = _genericRepository.Update(entity);
             return _mapper.Map<TDto>(dbEntity);
         }

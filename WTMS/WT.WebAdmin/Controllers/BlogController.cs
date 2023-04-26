@@ -24,13 +24,15 @@ namespace WT.WebAdmin.Controllers
         }
         public async Task<IActionResult> ActiveBlog()
         {
-            var activeBlogList = await _genericService.GetListAsync(s=>s.IsActive==true);
-            return View(model:activeBlogList);
+            var activeBlogList = await _genericService.GetListAsync();
+            activeBlogList = activeBlogList.Where(s => s.IsActive == true).ToList();
+            return View(model: activeBlogList);
         }
 
-        public IActionResult DeactiveBlog()
+        public async Task<IActionResult> DeactiveBlog()
         {
-            var deaktiveBlogList = _genericService.GetListAsync(s=>s.IsActive==false);
+            var deaktiveBlogList = await _genericService.GetListAsync();
+            deaktiveBlogList = deaktiveBlogList.Where(s => s.IsActive == false).ToList();
             return View(model: deaktiveBlogList);
         }
         [HttpGet]
@@ -69,6 +71,22 @@ namespace WT.WebAdmin.Controllers
         {
             var data = await _genericService.GetByIdAsync(id);
             return View(data);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var data = await _genericService.GetByIdAsync(id);
+            return View(data);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(BlogDto blogDto)
+        {
+            blogDto.IsActive = false;
+            blogDto.Deleted_Date = DateTime.Now;
+            _genericService.Update(blogDto);
+            return RedirectToAction(nameof(ActiveBlog));
         }
 
 
