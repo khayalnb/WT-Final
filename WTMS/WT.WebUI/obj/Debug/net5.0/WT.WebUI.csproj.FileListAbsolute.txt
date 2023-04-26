@@ -409,3 +409,4 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\staticwebassets\WT.We
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Shared\_ProductPartial.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\CustomerOperation\LikeIndex.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Product\ProductList.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\CustomerOperation\BasketListIndex.cshtml.g.cs

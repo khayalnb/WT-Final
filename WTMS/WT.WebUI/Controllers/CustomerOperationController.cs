@@ -15,7 +15,11 @@ namespace WT.WebUI.Controllers
         private readonly AppDbContext _appDbContext;
         public CustomerOperationController(AppDbContext appDbContext) => _appDbContext = appDbContext;
 
+        [Route("like-list")]
         public IActionResult LikeIndex() => View();
+
+        [Route("basket-list")]
+        public IActionResult BasketListIndex() => View();
        
 
         public JsonResult GetProduct(List<int> likedProductIds)

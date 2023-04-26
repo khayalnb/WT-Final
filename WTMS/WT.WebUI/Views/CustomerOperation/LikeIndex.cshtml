@@ -1,5 +1,17 @@
 ﻿<link rel="stylesheet" href="~/assets/css/likes.css">
-
+<style>
+    .go-back {
+        background-color: #383e42;
+        width: 15%;
+        color: #fff;
+        border: none;
+        text-align: center;
+        padding: 7px 0px;
+        border-radius: 5px;
+        margin-top: 2rem;
+        color: white !important;
+    }
+</style>
 <section>
     <div class="container">
         <div class="row d-flex justify-content-end">
@@ -10,185 +22,16 @@
             </div>
             <div class="col-sm-12 mt-2 width-change-box">
                 <h4>Sevimlilərim</h4>
+               
             </div>
         </div>
         <div class="row mt-3 like-container">
-            @*<div class="col-sm-12 mb-3">
-                    <div class="like-card">
-                        <div class="product-image">
-                            <img src="~/assets/img/apple-14-pro-deep-purple-1-min.jpg" alt="">
-                        </div>
-                        <div class="product-detail">
-                            <div class="category-name">
-                                <span>>Telefonlar və planşetlər</span>
-                                <span>Apple iPhone 14 Pro 128GB Deep Purple</span>
-                            </div>
-                            <div class="info-product">
-                                <div>
-                                    <span>Rəng</span>
-                                    <div class="color">
-
-                                    </div>
-                                </div>
-                                <div>
-                                    <span>Yaddaş</span>
-                                    <span>128 GB</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="offer">
-                            <div class="offer-box">
-                                <span>Faizsiz kredit</span>
-                            </div>
-                        </div>
-                        <div class="basket-price">
-                            <div>
-                                <span>3099 <img src="~/assets/img/price_logo_green.svg" alt=""></span>
-                                <button><img src="~/assets/img/x.svg" alt=""></button>
-                            </div>
-                            <button>
-                                <img src="~/assets/img/basket.svg" alt="">
-                                Səbətə əlavə et
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 mb-3">
-                    <div class="like-card">
-                        <div class="product-image">
-                            <img src="~/assets/img/apple-14-pro-deep-purple-1-min.jpg" alt="">
-                        </div>
-                        <div class="product-detail">
-                            <div class="category-name">
-                                <span>>Telefonlar və planşetlər</span>
-                                <span>Apple iPhone 14 Pro 128GB Deep Purple</span>
-                            </div>
-                            <div class="info-product">
-                                <div>
-                                    <span>Rəng</span>
-                                    <div class="color">
-
-                                    </div>
-                                </div>
-                                <div>
-                                    <span>Yaddaş</span>
-                                    <span>128 GB</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="offer">
-                            <div class="offer-box">
-                                <span>Faizsiz kredit</span>
-                            </div>
-                        </div>
-                        <div class="basket-price">
-                            <div>
-                                <span>3099 <img src="~/assets/img/price_logo_green.svg" alt=""></span>
-                                <button><img src="~/assets/img/x.svg" alt=""></button>
-                            </div>
-
-                            <button>
-                                <img src="~/assets/img/basket.svg" alt="">
-                                Səbətə əlavə et
-                            </button>
-                        </div>
-                    </div>
-                </div>*@
+         
         </div>
     </div>
 </section>
 
 @section Scripts{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script>
-        $(document).ready(() => {
-            load();
-            function load() {
-                const ids = JSON.parse(localStorage.getItem("likedProductIds"))
-                console.log(ids)
-                if (ids === null) {
-                    console.log("epty array")
-                    return;
-                }
-                $.ajax({
-                    url: "/CustomerOperation/GetProduct",
-                    type: "Post",
-                    data: {
-                        likedProductIds: ids
-                    },
-                    success: function (res) {
-                        const container = $('.like-container');
-                        let html = "";
-                        container.html("");
-                        res.data.forEach(product => {
-                            console.log(product)
-                            html = html + `
-                                 <div class="col-sm-12 mb-3">
-                                    <div class="like-card">
-                                        <div class="product-image">
-                                            <img src="/AdminPanelProjectFolderNameImages/ProductImage/${product.images[0].imageName}" alt="">
-                                        </div>
-                                        <div class="product-detail">
-                                            <div class="category-name">
-                                                <span>${product.brand.name}</span>
-                                                <span>${product.name}</span>
-                                            </div>
-                                            <div class="info-product">
-                                                <div style="display:flex; flex-direction:column; margin-right:3rem">
-                                                    <span>Endirim məbləgi</span>
-                                                   <span style="margin-top:5px;">${product.disCount} AZN</span>
-                                                </div>
-                                                <div>
-                                                    <span>Çatdırılma</span>
-                                                    <span>${product.isFreeDelivery}</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="offer">
-                                            <div class="offer-box">
-                                                <span>Faizsiz kredit</span>
-                                            </div>
-                                        </div>
-                                        <div class="basket-price">
-                                            <div>
-                                                <span>${product.price} <img src="/assets/img/price_logo_green.svg" alt=""></span>
-                                                <button data-heart-id=${product.id} class="remove-product"><img src="/assets/img/x.svg" alt=""></button>
-                                            </div>
-                                            <button >
-                                                <img src="/assets/img/basket.svg" alt="">
-                                                Səbətə əlavə et
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            `
-                        })
-                        container.append(html)
-                    }
-                });
-            }
-        })
-
-
-       
-
-        window.addEventListener("load", function () {
-            let removeBtn = document.getElementsByClassName("remove-product");
-            [...removeBtn].forEach(item => {
-               
-                let stringArr = localStorage.getItem("likedProductIds");
-                let likedProductIds = (stringArr === null || stringArr === "" || typeof stringArr === "undefined") ? [] : JSON.parse(stringArr);
-                item.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    let pId = this.getAttribute("data-heart-id");
-                    likedProductIds = likedProductIds.filter(id => id !== parseInt(pId));
-                    localStorage.setItem("likedProductIds", JSON.stringify(likedProductIds));
-                    window.location.reload();
-                });
-            });
-        });
-      
-       
-    </script>
+    <script src="~/assets/js/loading_like_product_and_remove.js"></script>
 }
-
