@@ -1,14 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WT.DAL.Models;
+using WT.DAL.Models.Identity;
 
 namespace WT.DAL.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) {}
         public DbSet<AdressType> AdressTypes { get; set; }
@@ -44,8 +46,10 @@ namespace WT.DAL.Data
               .HasIndex(c => c.Name)
               .IsUnique();
 
-            
+
+            AppDbInitializer.ApplyDbSeedData(modelBuilder);
         }
+
        
     }
 }

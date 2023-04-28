@@ -9,9 +9,11 @@ using WT.BLL.Services.Interfaces;
 using WT.DAL.Models;
 using WT.BLL.Message;
 using WT.BLL.Utilities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WT.WebAdmin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class OfferCompanyController : Controller
     {
         private readonly IOfferCompanyService _offerCompanyService;

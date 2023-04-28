@@ -22,8 +22,6 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNet
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cors.dll
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -106,8 +104,6 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.Extens
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.Extensions.Http.dll
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -410,3 +406,11 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Shared\_P
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\CustomerOperation\LikeIndex.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Product\ProductList.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\CustomerOperation\BasketListIndex.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\obj\Debug\net5.0\Razor\Views\Product\ProductDetails.cshtml.g.cs

@@ -13,11 +13,11 @@ using WT.DAL.Models;
 using WT.WebAdmin.ViewModels;
 using System.Text;
 using Newtonsoft.Json;
-   
+using Microsoft.AspNetCore.Authorization;
 
 namespace WT.WebAdmin.Controllers
 {
- 
+    [Authorize(Roles = "Admin")]
     public class ProductController : Controller
     {
         private readonly IProductService _productService;

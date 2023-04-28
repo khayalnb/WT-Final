@@ -1,0 +1,54 @@
+﻿@model RegisterVM
+<link rel="stylesheet" href="~/assets/css/login_register.css">
+
+<section class="my-3">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-4">
+                <div class="login-register-box">
+                    <div class="box-title w-100">
+                        <h5>Qeydiyyat</h5>
+                        <div class="text-danger text-start" asp-validation-summary="All"></div>
+                    </div>
+                    <form method="post">
+                        <div class="d-flex justify-content-center form">
+                            <div>
+                                <label asp-for="FirstName">Ad</label>
+                                <input asp-for="FirstName" type="text">
+                                <span class="text-danger mb-3" asp-validation-for="FirstName"></span>
+                            </div>
+                            <div>
+                                <label asp-for="LastName">Soyad</label>
+                                <input asp-for="LastName" type="text">
+                                <span class="text-danger mb-3" asp-validation-for="LastName"></span>
+                            </div>
+                            <div>
+                                <label asp-for="Email">E-poçt ünvanı</label>
+                                <input asp-for="Email" type="text">
+                                <span class="text-danger mb-3" asp-validation-for="Email"></span>
+                            </div>
+                            <div>
+                                <label asp-for="Password">Şifrə</label>
+                                <input asp-for="Password">
+                                <span class="text-danger mb-3" asp-validation-for="Password"></span>
+                            </div>
+                            <div>
+                                <label asp-for="ConfirmPassword">Mobil nömrə</label>
+                                <input asp-for="ConfirmPassword">
+                                <span class="text-danger mb-3" asp-validation-for="ConfirmPassword"></span>
+                            </div>
+                            <div class="submit-btn-box">
+                                <button type="submit">Qeydiyyatdan keç</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="~/assets/js/login_register.js"></script>
+    
+}

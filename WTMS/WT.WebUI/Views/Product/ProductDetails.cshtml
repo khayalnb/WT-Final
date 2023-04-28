@@ -1,0 +1,102 @@
+﻿@model Product
+<link rel="stylesheet" href="~/assets/css/company_details.css">
+<link rel="stylesheet" href="~/assets/css/product_details.css">
+
+<section class="company-product">
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-sm-12 my-3 ps-4 pt-3">
+                <h5>Məhsul məlumatları</h5>
+            </div>
+        </div>
+        <div class="row pb-3">
+            <div class="col-sm-6 d-flex justify-content-between">
+                <div class="img-list">
+                    @{
+                        byte count = 0;
+                        foreach (var item in Model.Images)
+                        {
+                            count++;
+                            <div class="img-item @(count==1 ? "active" : "")">
+                                <img src="/AdminPanelProjectFolderNameImages/ProductImage/@item.ImageName" alt="">
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="main-img">
+                    @{
+                        var mainImage = Model.Images.Where(i => i.MainImage == true).FirstOrDefault().ImageName;
+                    }
+                    <img id="main-img" src="/AdminPanelProjectFolderNameImages/ProductImage/@mainImage" alt="">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="stock-delivery">
+                    @if (Model.Count <= 0)
+                    {
+                        <div>Stokda yoxdur</div>
+                    }
+                    else
+                    {
+                        <div>Stokda var</div>
+                    }
+                    @if (Model.IsFreeDelivery.ToLower() == "ödənişsiz")
+                    {
+                        <div>Pulsuz çatdırılma</div>
+                    }
+                    else
+                    {
+                        <div>Ödənişli çatdırılma</div>
+                    }
+
+
+                </div>
+                <div class="product-info">
+                    <span>Brend:</span>
+                    <span>@Model.Brand.Name</span>
+                </div>
+                <div class="product-info">
+                    <span>Model: </span>
+                    <span>@Model.Name</span>
+                </div>
+                <div class="product-info">
+                    <span>Qiymət:</span>
+                    <span>@Model.Price AZN</span>
+                </div>
+                <div class="product-info">
+                    <span>Endirim məbləği: </span>
+                    <span>@Model.DisCount AZN (Nağd alışda)</span>
+                </div>
+                <div class="product-info">
+                    <span>Qaranti müddəti: </span>
+                    <span>@Model.WarrantyYearNumber İl</span>
+                </div>
+            </div>
+            <div class="col-sm-12 mt-5">
+                <div class="hr"></div>
+            </div>
+            <div class="col-sm-12 my-3">
+                <h5>Texniki xüsusiyyətlər</h5>
+            </div>
+            @if (ViewBag.Specifications is not null)
+            {
+                @foreach (string item in ViewBag?.Specifications)
+                {
+                    if (!string.IsNullOrWhiteSpace(item))
+                    {
+                        <div class="col-sm-3">
+                            <div class="technical">
+                                <span>@item</span>
+                            </div>
+                        </div>
+                    }
+
+                }
+            }
+
+        </div>
+    </div>
+</section>
+@section Scripts{
+    <script src="~/assets/js/product_details.js"></script>
+}

@@ -22,8 +22,6 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.Asp
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cors.dll
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -106,8 +104,6 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.Ext
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.Extensions.Http.dll
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Core.dll
-C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.dll
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -479,3 +475,9 @@ C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\ref\WT.WebAdmin.dl
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\staticwebassets\WT.WebAdmin.StaticWebAssets.xml
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\ShopAndOffice\Edit.cshtml.g.cs
 C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\Blog\Delete.cshtml.g.cs
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebAdmin\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs

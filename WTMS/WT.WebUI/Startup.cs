@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using WT.DAL.Data;
+using WT.DAL.Models.Identity;
 using WT.WebUI.Helper;
 
 namespace WT.WebUI
@@ -32,8 +34,21 @@ namespace WT.WebUI
             services.AddDbContext<AppDbContext>(opts =>
             {
                 opts.UseSqlServer(Configuration.GetConnectionString("WtConnectionString"));
-                //opts.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
             });
+
+            services.AddIdentity<AppUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Lockout.MaxFailedAccessAttempts = 3;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(2);
+                options.Password.RequiredLength = 8;
+                options.User.RequireUniqueEmail = true;
+
+            });
+
             services.AddControllersWithViews();
             services.RegisterAppServices();
         }
@@ -52,8 +67,8 @@ namespace WT.WebUI
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-            
             app.UseStaticFiles();
+            
             app.UseStaticFiles(new StaticFileOptions
             {
                 FileProvider = new PhysicalFileProvider(
@@ -64,6 +79,7 @@ namespace WT.WebUI
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

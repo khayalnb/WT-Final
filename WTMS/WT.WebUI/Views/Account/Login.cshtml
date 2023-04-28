@@ -1,0 +1,49 @@
+﻿@model LoginVM
+<link rel="stylesheet" href="~/assets/css/login_register.css">
+<style>
+   
+   
+</style>
+<section class="my-5">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-4">
+                <div class="login-register-box">
+                    <div class="box-title w-100">
+                        <h5>Giriş</h5>
+                        <div class="text-danger text-center" asp-validation-summary="All"></div>
+                    </div>
+                    <form method="post">
+                        <div class="d-flex justify-content-center form">
+                            <div>
+                                <label for="phone_input">E-poçt ünvanı</label>
+                                <input id="phone_input" asp-for="Email">
+                            </div>
+                            <div class="password-box">
+                                <label for="password_input">Şifrəniz</label>
+                                <input id="password_input" type="password" asp-for="Password">
+                                <img id="show-hide-btn" src="~/assets/img/login/eye.svg" alt="">
+                            </div>
+                            <div class="forward" style="display:flex; align-items:center;">
+                                <input asp-for="RememberMe" style=" width: 15px; margin-bottom: 0px !important; margin-right: 5px;"/>
+                                <label asp-for="RememberMe" style=" margin-bottom: 0px !important;" >Yadda saxla</label>
+                            </div>
+                            <div class="submit-btn-box">
+                                <button type="submit">Daxil ol</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="~/assets/js/login_register.js"></script>
+    <script>
+        inputSecretOrvisible();
+        validPhoneAndPassword();
+    </script>
+
+}

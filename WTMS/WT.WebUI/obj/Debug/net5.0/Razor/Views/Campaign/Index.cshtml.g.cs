@@ -40,8 +40,15 @@ using WT.WebUI.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 5 "C:\Users\Siyaset\Desktop\wt\WTMS\WT.WebUI\Views\_ViewImports.cshtml"
+using WT.BLL.ViewModels.Account;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2e734aebc7b8cc2513e68a83accf85cdaf8ea869", @"/Views/Campaign/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5f11d1fb80e8b77056f4a918feb7114a095d4384", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a00597076510193acdadde0f0c80ac191a647587", @"/Views/_ViewImports.cshtml")]
     public class Views_Campaign_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<OfferCompany>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Campaign", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -129,7 +136,7 @@ WriteAttributeValue("", 753, item.ImageName, 753, 15, false);
 #line hidden
 #nullable disable
             WriteLiteral(" <span>...</span>\r\n                                    </p>\r\n                                    <div class=\"more-info-and-date\">\r\n                                        <time>Tarix: 21 - 28 Fevral</time>\r\n                                        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e734aebc7b8cc2513e68a83accf85cdaf8ea8696603", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2e734aebc7b8cc2513e68a83accf85cdaf8ea8696785", async() => {
                 WriteLiteral("Daha ətraflı");
             }
             );
