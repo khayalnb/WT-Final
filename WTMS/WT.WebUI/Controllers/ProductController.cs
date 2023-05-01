@@ -42,7 +42,7 @@ namespace WT.WebUI.Controllers
         public async Task<IActionResult> GetByBrandId(int? id, ProductVM productVM)
         {
             productVM ??= new();
-            var source = _context.Products.Where(p => p.BrandId == id || p.IsActive == true)
+            var source = _context.Products.Where(p => p.BrandId == id )
                       .Include(p => p.SubCategory)
                       .Include(i => i.Images)
                       .Include(b => b.Brand)

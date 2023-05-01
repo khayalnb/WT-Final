@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
-    load();
-    function load() {
+    likeLoad();
+    function likeLoad() {
         const ids = JSON.parse(localStorage.getItem("likedProductIds"))
         if (ids === null || ids.length <= 0) {
             let html = `
